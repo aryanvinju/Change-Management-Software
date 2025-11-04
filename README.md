@@ -58,5 +58,5 @@ Removes the most recently added change from the Stack and deletes it from both B
 
 ### Using GCC
 ```bash
-gcc change_management.c -o change_mgmt
+gcc main.c bst.c stack.c priority_queue.c -o change_mgmt
 ./change_mgmt
