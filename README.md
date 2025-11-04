@@ -18,7 +18,7 @@ Each request has an ID, title, priority, and status.
 It is added to both the BST (for ID-based search) and the Priority Queue (for priority-based processing), and also pushed onto the Stack for Undo operations.
 
 ### 2. Process Highest Priority Request
-Dequeues the request with the lowest priority number (highest importance) from the Priority Queue.  
+Dequeues the request with the lowest priority number (highest importance) from the Priority Queue (1-high, 2-medium, 3-low priority).  
 Updates its status in the BST to "Approved".
 
 ### 3. Search Request by ID
