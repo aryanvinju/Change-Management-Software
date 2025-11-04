@@ -2,8 +2,8 @@
 #define STACK_H
 #include "change_request.h"
 typedef struct{
-ChangeRequest arr[100];
-int top;
+  ChangeRequest arr[100];
+  int top;
 }Stack;
 void initStack(Stack* s);
 void push(Stack* s, ChangeRequest data);
