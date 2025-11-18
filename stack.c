@@ -7,7 +7,7 @@ void initStack(Stack *s)
 
 void push(Stack *s, ChangeRequest d)
 {
-    if (s->top == 99)
+    if (s->top == 100)
     {
         printf("Undo stack full!\n");
         return;
