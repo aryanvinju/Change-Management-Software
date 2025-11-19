@@ -4,7 +4,7 @@
 
 typedef struct
 {
-    ChangeRequest arr[101];
+    ChangeRequest arr[100];
     int top;
 } Stack;
 
@@ -12,4 +12,6 @@ void initStack(Stack *s);
 void push(Stack *s, ChangeRequest data);
 ChangeRequest pop(Stack *s);
 int isStackEmpty(Stack *s);
+void updatePrioritiesStack(Stack *s, int newPriority); // Added function
+
 #endif
