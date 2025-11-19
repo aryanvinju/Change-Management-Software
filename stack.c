@@ -1,13 +1,11 @@
 #include <stdio.h>
 #include "stack.h"
-void initStack(Stack *s) 
-{
-    s->top = -1;
-}
+
+void initStack(Stack *s) { s->top = -1; }
 
 void push(Stack *s, ChangeRequest d)
 {
-    if (s->top == 100)
+    if (s->top == 99)
     {
         printf("Undo stack full!\n");
         return;
@@ -17,7 +15,7 @@ void push(Stack *s, ChangeRequest d)
 
 ChangeRequest pop(Stack *s)
 {
-    ChangeRequest e = {0};
+    ChangeRequest e = {0}; // Zero-initialize
     if (s->top == -1)
     {
         printf("Nothing to undo.\n");
@@ -26,7 +24,13 @@ ChangeRequest pop(Stack *s)
     return s->arr[(s->top)--];
 }
 
-int isStackEmpty(Stack *s)
-{
-    return s->top == -1; 
+int isStackEmpty(Stack *s) { return s->top == -1; }
+
+// New function to update priorities in the stack
+void updatePrioritiesStack(Stack *s, int newPriority) {
+    for (int i = 0; i <= s->top; i++) {
+        if (s->arr[i].priority >= newPriority) {
+            s->arr[i].priority++;
+        }
+    }
 }
